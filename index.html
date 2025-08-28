@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; }
+    header, footer { background: #333; color: #fff; padding: 1rem; text-align: center; }
+    nav { display: flex; justify-content: space-around; background: #555; color: #fff; }
+    nav a { color: white; text-decoration: none; padding: 0.5rem; }
+    .container { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; padding: 1rem; }
+    .content { background: #f4f4f4; padding: 1rem; }
+    .sidebar { background: #ddd; padding: 1rem; }
+    .cards { display: flex; gap: 1rem; margin-top: 1rem; }
+    .card { flex: 1; background: #eee; padding: 1rem; text-align: center; }
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+      .cards { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>My Responsive Page</h1></header>
+  <nav>
+    <a href="#">Home</a><a href="#">About</a><a href="#">Services</a><a href="#">Contact</a>
+  </nav>
+  <div class="container">
+    <main class="content">
+      <h2>Welcome</h2>
+      <p>This is the main content area using CSS Grid layout.</p>
+      <div class="cards">
+        <div class="card">Card 1</div>
+        <div class="card">Card 2</div>
+        <div class="card">Card 3</div>
+      </div>
+    </main>
+    <aside class="sidebar">
+      <h3>Sidebar</h3>
+      <p>Additional links or ads can go here.</p>
+    </aside>
+  </div>
+  <footer><p>&copy; 2025 My Website</p></footer>
+</body>
+</html>
