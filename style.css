@@ -1,0 +1,70 @@
+/* Reset default margin & set font */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Header & Footer */
+header, footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation styled with Flexbox */
+nav {
+  display: flex;
+  justify-content: space-around;
+  background: #555;
+  color: #fff;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+}
+
+/* Grid Layout for main content */
+.container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Content and Sidebar */
+.content {
+  background: #f4f4f4;
+  padding: 1rem;
+}
+
+.sidebar {
+  background: #ddd;
+  padding: 1rem;
+}
+
+/* Flexbox Cards */
+.cards {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  flex: 1;
+  background: #eee;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Responsive Media Query */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    flex-direction: column;
+  }
+}
